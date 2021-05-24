@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Family book</title>
+    </head>
+    <body>
+        <center>
+            <h1>MY FAMILY BOOK</h1>
+            <br>
+            <br>
+            <img id="family_image" src="https://tse4.mm.bing.net/th?id=OIP.zvN2DA7nPF6L3iFAawjzSAHaHa&pid=Api&P=0&w=300&h=300">
+            <br>
+            <br>
+            <h2 id="family_name">Vimal Saraf</h2>
+            <br>
+            <br>
+            <button onclick="next_image()">NEXT</button>
+        </center>
+    </body>
+    <script>
+var images =["https://tse4.mm.bing.net/th?id=OIP.zvN2DA7nPF6L3iFAawjzSAHaHa&pid=Api&P=0&w=300&h=300",
+"https://tse3.mm.bing.net/th?id=OIP.FICtPhSJ1cubinzvu4ma7gHaKX&pid=Api&P=0&w=300&h=300",
+"https://tse1.mm.bing.net/th?id=OIP.FZW0Vj6yfdb3SNsSYLzNBAAAAA&pid=Api&P=0&w=300&h=300",
+"https://tse2.mm.bing.net/th?id=OIP.Qrj-VB_4XiIRS8l1sQFmnAHaMr&pid=Api&P=0&w=300&h=300",
+"https://tse3.mm.bing.net/th?id=OIP.TCFvkSkFbF6VU3r9KKUUDgHaLI&pid=Api&P=0&w=300&h=300"
+];
+
+var names =["VIMAL SARAF", "KUSUM SARAF", "VISHAL SARAF", "SHIKHA SARAF", "DARSH SARAF"];
+
+var i = 0;
+function next_image()
+{
+    i++;
+var number_of_family_member = 5
+if(i > number_of_family_member)
+{
+    i = 0
+}
+var new_image = images[i];
+var new_names = names[i];
+document.getElementById("family_image").src = new_image;
+document.getElementById("family_name").innerHTML = new_names;
+}
+    </script>
+</html>
